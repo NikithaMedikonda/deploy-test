@@ -1,0 +1,24 @@
+name: Build, Test and Deploy
+
+on:
+  push:
+    branches:
+    - test
+
+jobs: 
+  build:
+    name: JOB
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+    
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+      
+      - name: Build the application
+        run: npm run build
