@@ -19,6 +19,9 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - name: Start the App
+        run: npm start
       
       - name: Build the application
         run: npm run build
